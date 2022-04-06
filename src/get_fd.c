@@ -6,7 +6,7 @@
 /*   By: nprimo <nprimo@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 10:12:22 by nprimo            #+#    #+#             */
-/*   Updated: 2022/04/06 10:18:27 by nprimo           ###   ########.fr       */
+/*   Updated: 2022/04/06 10:28:47 by nprimo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ int	get_fd(const char *filepath, int flag)
 
 	fd = open(filepath, flag);
 	if (fd < 0)
-	{
 		perror("Error: ");
-		return (free_and_exit());
-	}
 	return(fd);
 }
