@@ -6,7 +6,7 @@
 /*   By: nprimo <nprimo@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 10:01:04 by nprimo            #+#    #+#             */
-/*   Updated: 2022/04/09 11:09:45 by nprimo           ###   ########.fr       */
+/*   Updated: 2022/04/09 11:16:57 by nprimo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@
 # define PATH_CAT "/bin/cat"
 # define PATH_WC "/usr/bin/wc"
 
-int	exec_pipe(char **av_in, char **av_out);
+int	exec_pipe(int fd[2], char **av_in, char **av_out);
 
 #endif
