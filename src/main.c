@@ -6,7 +6,7 @@
 /*   By: nprimo <nprimo@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 09:59:42 by nprimo            #+#    #+#             */
-/*   Updated: 2022/04/09 11:27:16 by nprimo           ###   ########.fr       */
+/*   Updated: 2022/04/11 17:34:57 by nprimo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	main(int ac, char **av)
 {
 	if (ac > 4)
 	{
+		if (ac == 5)
+			exec_simple_pipe(av);
 		if (access(av[1], R_OK) != 0 || access(av[ac - 1], W_OK) != 0)
 			exit(1); // verbose exit function - how do I pass the error code?
 		printf("Do something with %s and %s\n", av[1], av[ac - 1]);
