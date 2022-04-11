@@ -6,7 +6,7 @@
 /*   By: nprimo <nprimo@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 10:01:04 by nprimo            #+#    #+#             */
-/*   Updated: 2022/04/11 15:59:18 by nprimo           ###   ########.fr       */
+/*   Updated: 2022/04/11 17:26:07 by nprimo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@
 # define PATH_WC "/usr/bin/wc"
 
 int	exec_command(int fd_in, int fd_out, char **av);
+
+char	**ft_split(char const *s, char c);
 
 #endif
