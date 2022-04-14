@@ -24,7 +24,7 @@
 # define PATH_WC "/usr/bin/wc"
 
 int		exec_command(int fd_in, int fd_out, char **av, char **envp);
-int		exec_simple_pipe(char **av);
+int		exec_simple_pipe(char **av, char **envp);
 
 char	**ft_split(char const *s, char c);
 void	free_split(char **av);
