@@ -14,10 +14,13 @@
 
 void	free_split(char **av)
 {
-	while (av)
+	int	pos;
+
+	pos = 0;
+	while (av[pos])
 	{
-		if (*av)
-			free(*av);
-		av++;
+		free(av[pos]);
+		pos++;
 	}
+	free(av);
 }
