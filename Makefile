@@ -6,12 +6,12 @@
 #    By: nprimo <nprimo@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/06 09:54:53 by nprimo            #+#    #+#              #
-#    Updated: 2022/04/06 10:37:04 by nprimo           ###   ########.fr        #
+#    Updated: 2022/04/14 15:45:54 by nprimo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -g -Wall -Werror -Wextra -fsanitize=address
+CFLAGS = -g -Wall -Werror -Wextra #-fsanitize=address
 RM = rm -rf
 
 NAME = pipex
