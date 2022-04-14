@@ -6,7 +6,7 @@
 /*   By: nprimo <nprimo@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:29:20 by nprimo            #+#    #+#             */
-/*   Updated: 2022/04/11 17:37:34 by nprimo           ###   ########.fr       */
+/*   Updated: 2022/04/14 15:47:22 by nprimo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	exec_simple_pipe(char **av)
 	if (!av1)
 		return (1);
 	exec_command(fd_pipe[0], fd_out, av1);
+	free_split(av0);
+	free_split(av1);
 	close(fd_in);
 	close(fd_out);
 	return (0);
