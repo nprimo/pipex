@@ -6,13 +6,13 @@
 /*   By: nprimo <nprimo@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 12:24:52 by nprimo            #+#    #+#             */
-/*   Updated: 2022/04/11 15:45:55 by nprimo           ###   ########.fr       */
+/*   Updated: 2022/04/14 16:03:07 by nprimo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-int	exec_command(int fd_in, int fd_out, char **av)
+int	exec_command(int fd_in, int fd_out, char **av, char **envp)
 {
 	pid_t	pid;
 
@@ -26,7 +26,7 @@ int	exec_command(int fd_in, int fd_out, char **av)
 			exit(1); // verbose
 		if (close(fd_in) == -1 || close(fd_out) == -1)
 			exit(1); // verbose
-		if (execve(av[0], av, NULL) == -1)
+		if (execve(av[0], av, envp) == -1)
 			exit(1); // verbose
 	}
 	if (waitpid(pid, NULL, 0) == -1)

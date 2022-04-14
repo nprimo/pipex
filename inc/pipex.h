@@ -23,7 +23,7 @@
 # define PATH_CAT "/bin/cat"
 # define PATH_WC "/usr/bin/wc"
 
-int		exec_command(int fd_in, int fd_out, char **av);
+int		exec_command(int fd_in, int fd_out, char **av, char **envp);
 int		exec_simple_pipe(char **av);
 
 char	**ft_split(char const *s, char c);

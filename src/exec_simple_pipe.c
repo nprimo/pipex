@@ -6,7 +6,7 @@
 /*   By: nprimo <nprimo@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:29:20 by nprimo            #+#    #+#             */
-/*   Updated: 2022/04/14 15:47:22 by nprimo           ###   ########.fr       */
+/*   Updated: 2022/04/14 16:03:22 by nprimo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int	exec_simple_pipe(char **av)
 	av0 = ft_split(av[2], ' ');
 	if (!av0)
 		return (1);
-	exec_command(fd_in, fd_pipe[1], av0);
+	exec_command(fd_in, fd_pipe[1], av0, NULL);
 	av1 = ft_split(av[3], ' ');
 	if (!av1)
 		return (1);
-	exec_command(fd_pipe[0], fd_out, av1);
+	exec_command(fd_pipe[0], fd_out, av1, NULL);
 	free_split(av0);
 	free_split(av1);
 	close(fd_in);
