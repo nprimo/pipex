@@ -16,9 +16,8 @@ int	main(int ac, char **av)
 {
 	if (ac > 4)
 	{
-		if (ac == 5)
-			exec_simple_pipe(av);
-		if (access(av[1], R_OK) != 0 || access(av[ac - 1], W_OK) != 0)
+		if (access(av[1], R_OK) != 0 || access(av[ac - 1], W_OK) != 0
+			|| (ac == 5 && exec_simple_pipe(av) == 1))
 			exit(1); // verbose exit function - how do I pass the error code?
 		printf("Do something with %s and %s\n", av[1], av[ac - 1]);
 	}
