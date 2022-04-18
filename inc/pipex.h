@@ -26,7 +26,10 @@
 int		exec_command(int fd_in, int fd_out, char **av, char **envp);
 int		exec_simple_pipe(char **av, char **envp);
 
+/*-- libft --*/
 char	**ft_split(char const *s, char c);
 void	free_split(char **av);
+size_t	ft_strlen(const char *str);
+char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 
 #endif
