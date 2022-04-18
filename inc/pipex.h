@@ -30,6 +30,7 @@ int		exec_simple_pipe(char **av, char **envp);
 char	**ft_split(char const *s, char c);
 void	free_split(char **av);
 size_t	ft_strlen(const char *str);
-char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		exec_2_pipe(char **av, char **envp);
 
 #endif

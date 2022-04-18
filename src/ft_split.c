@@ -6,13 +6,12 @@
 /*   By: nprimo <nprimo@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 16:23:05 by nprimo            #+#    #+#             */
-/*   Updated: 2022/04/11 16:45:34 by nprimo           ###   ########.fr       */
+/*   Updated: 2022/04/18 16:29:03 by nprimo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-static size_t	ft_strlen(const char *str);
 static int		count_words(char const *s, char c);
 static char		*assign_word(char const *s, char c);
 static size_t	ft_strlcpy(char *s1, const char *s2, size_t n);
@@ -42,18 +41,6 @@ char	**ft_split(char const *s, char c)
 		pos++;
 	}	
 	return (res);
-}
-
-static size_t	ft_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	if (!str)
-		return (len);
-	while (str[len])
-		len++;
-	return (len);
 }
 
 static int	count_words(char const *s, char c)
