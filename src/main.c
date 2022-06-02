@@ -14,6 +14,7 @@
 
 int	main(int ac, char **av, char **envp)
 {
+	char *av_def[] = {"cat", "file1", NULL};
 	if (ac > 4)
 	{
 		if (ac == 5 && exec_simple_pipe(av, envp) == 1)
@@ -26,6 +27,7 @@ int	main(int ac, char **av, char **envp)
 	}
 	else
 	{
+		exec_command(0, 1, av_def, envp);
 		printf("Not enough arguments! Insert more than 4\n");
 		return (1);
 	}
